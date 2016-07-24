@@ -1,3 +1,8 @@
+*.xcodeproj/*
+!*.xcodeproj/project.pbxproj
+!*.xcworkspace/contents.xcworkspacedata
+.DS_Store
+
 #####
 # OS Xの一時ファイル
 
@@ -31,3 +36,4 @@ build/
 !default.perspectivev3
 
 xcuserdata
+
