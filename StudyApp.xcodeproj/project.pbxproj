@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		02F64C861D4362AE00B33C80 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F64C851D4362AE00B33C80 /* AppDelegate.swift */; };
-		02F64C881D4362AE00B33C80 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F64C871D4362AE00B33C80 /* ViewController.swift */; };
+		02F64C881D4362AE00B33C80 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F64C871D4362AE00B33C80 /* TimerViewController.swift */; };
 		02F64C8B1D4362AE00B33C80 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02F64C891D4362AE00B33C80 /* Main.storyboard */; };
 		02F64C8D1D4362AE00B33C80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02F64C8C1D4362AE00B33C80 /* Assets.xcassets */; };
 		02F64C901D4362AE00B33C80 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02F64C8E1D4362AE00B33C80 /* LaunchScreen.storyboard */; };
+		B30B07681D449B6000A73A0E /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30B07671D449B6000A73A0E /* GraphViewController.swift */; };
+		B30B076A1D449BCC00A73A0E /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30B07691D449BCC00A73A0E /* StartViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		02F64C821D4362AE00B33C80 /* StudyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02F64C851D4362AE00B33C80 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		02F64C871D4362AE00B33C80 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		02F64C871D4362AE00B33C80 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		02F64C8A1D4362AE00B33C80 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		02F64C8C1D4362AE00B33C80 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		02F64C8F1D4362AE00B33C80 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		02F64C911D4362AE00B33C80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B30B07671D449B6000A73A0E /* GraphViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphViewController.swift; sourceTree = "<group>"; };
+		B30B07691D449BCC00A73A0E /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +59,9 @@
 			isa = PBXGroup;
 			children = (
 				02F64C851D4362AE00B33C80 /* AppDelegate.swift */,
-				02F64C871D4362AE00B33C80 /* ViewController.swift */,
+				02F64C871D4362AE00B33C80 /* TimerViewController.swift */,
+				B30B07671D449B6000A73A0E /* GraphViewController.swift */,
+				B30B07691D449BCC00A73A0E /* StartViewController.swift */,
 				02F64C891D4362AE00B33C80 /* Main.storyboard */,
 				02F64C8C1D4362AE00B33C80 /* Assets.xcassets */,
 				02F64C8E1D4362AE00B33C80 /* LaunchScreen.storyboard */,
@@ -136,7 +142,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02F64C881D4362AE00B33C80 /* ViewController.swift in Sources */,
+				B30B07681D449B6000A73A0E /* GraphViewController.swift in Sources */,
+				B30B076A1D449BCC00A73A0E /* StartViewController.swift in Sources */,
+				02F64C881D4362AE00B33C80 /* TimerViewController.swift in Sources */,
 				02F64C861D4362AE00B33C80 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,6 +295,7 @@
 				02F64C961D4362AE00B33C80 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
