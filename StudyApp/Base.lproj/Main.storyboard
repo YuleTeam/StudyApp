@@ -30,6 +30,13 @@
                                     </segue>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lLf-qd-97Y">
+                                <rect key="frame" x="262" y="28" width="30" height="30"/>
+                                <state key="normal" title="Add"/>
+                                <connections>
+                                    <action selector="addDB:" destination="IhG-Lh-P0S" eventType="touchUpInside" id="QIe-dz-O5i"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -41,6 +48,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G7A-PW-I6B" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="59" y="425"/>
+            <point key="canvasLocation" x="21" y="350"/>
         </scene>
         <!--Page Menu View Controller-->
         <scene sceneID="lDc-X0-UMD">
@@ -220,6 +228,10 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+<<<<<<< HEAD
         <segue reference="Adc-mG-dso"/>
+=======
+        <segue reference="7Jt-VN-4sF"/>
+>>>>>>> b33b7cc36b7f2044a8f8e9140ec17b955b19479b
     </inferredMetricsTieBreakers>
 </document>
