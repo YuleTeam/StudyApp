@@ -17,6 +17,7 @@
 		1F9D6BDB470282AC08E251F4 /* Pods_StudyApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 965CCF4D6CFC5B7ABC478867 /* Pods_StudyApp.framework */; };
 		B30B07681D449B6000A73A0E /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30B07671D449B6000A73A0E /* GraphViewController.swift */; };
 		B30B076A1D449BCC00A73A0E /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30B07691D449BCC00A73A0E /* StartViewController.swift */; };
+		B37876BD1D61B08E00B137FB /* PageMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37876BC1D61B08E00B137FB /* PageMenuViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		965CCF4D6CFC5B7ABC478867 /* Pods_StudyApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StudyApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B30B07671D449B6000A73A0E /* GraphViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphViewController.swift; sourceTree = "<group>"; };
 		B30B07691D449BCC00A73A0E /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		B37876BC1D61B08E00B137FB /* PageMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageMenuViewController.swift; sourceTree = "<group>"; };
 		C209F413EA70369D1D149142 /* Pods-StudyApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StudyApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StudyApp/Pods-StudyApp.debug.xcconfig"; sourceTree = "<group>"; };
 		FEDFFDE9F4CA7D2EBBE1E629 /* Pods-StudyApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StudyApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-StudyApp/Pods-StudyApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -75,6 +77,7 @@
 				B30B07671D449B6000A73A0E /* GraphViewController.swift */,
 				B30B07691D449BCC00A73A0E /* StartViewController.swift */,
 				02F64C891D4362AE00B33C80 /* Main.storyboard */,
+				B37876BC1D61B08E00B137FB /* PageMenuViewController.swift */,
 				02F64C8C1D4362AE00B33C80 /* Assets.xcassets */,
 				02F64C8E1D4362AE00B33C80 /* LaunchScreen.storyboard */,
 				02F64C911D4362AE00B33C80 /* Info.plist */,
@@ -225,6 +228,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B30B07681D449B6000A73A0E /* GraphViewController.swift in Sources */,
+				B37876BD1D61B08E00B137FB /* PageMenuViewController.swift in Sources */,
 				B30B076A1D449BCC00A73A0E /* StartViewController.swift in Sources */,
 				027854671D6185E000A00DC6 /* StudyData.swift in Sources */,
 				02F64C881D4362AE00B33C80 /* TimerViewController.swift in Sources */,
