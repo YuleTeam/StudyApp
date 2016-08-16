@@ -10,9 +10,9 @@ import Foundation
 import NCMB
 
 // @objc(StudyData)
-class StudyData: NCMBObject, NCMBSubclassing{
-   
-    var userId: String! {
+class StudyData: NCMBObject, NCMBSubclassing {
+
+    private var userId: String! {
         get {
             return objectForKey("user_id") as! String
         }
@@ -20,7 +20,7 @@ class StudyData: NCMBObject, NCMBSubclassing{
             setObject(newValue, forKey: "user_id")
         }
     }
-//    
+//
 //    var startTime: String! {
 //        get {
 //            return objectForKey("startTime") as! String
@@ -29,8 +29,8 @@ class StudyData: NCMBObject, NCMBSubclassing{
 //            setObject(newValue, forKey: "startTime")
 //        }
 //    }
-    
-    var startDate: NSDate! {
+
+    private var startDate: NSDate! {
         get {
             return objectForKey("startDate") as! NSDate
         }
@@ -38,8 +38,8 @@ class StudyData: NCMBObject, NCMBSubclassing{
             setObject(newValue, forKey: "startDate")
         }
     }
-    
-    var interval: UInt {
+
+    private var interval: UInt {
         get {
             return objectForKey("Interval") as! UInt
         }
@@ -47,7 +47,7 @@ class StudyData: NCMBObject, NCMBSubclassing{
             setObject(newValue, forKey: "Interval")
         }
     }
-    
+
     static func ncmbClassName() -> String! {
         return "StudyData"
     }
