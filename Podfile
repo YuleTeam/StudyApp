@@ -2,6 +2,7 @@
 # platform :ios, '9.0'
 platform :ios, ‘9.0’
 pod 'Charts'
+pod 'PageMenu'
 use_frameworks!
 
 target 'StudyApp' do

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Kk0-fi-By1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Kk0-fi-By1">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -42,6 +42,34 @@
             </objects>
             <point key="canvasLocation" x="59" y="425"/>
         </scene>
+        <!--Page Menu View Controller-->
+        <scene sceneID="lDc-X0-UMD">
+            <objects>
+                <viewController id="DOg-j8-D54" customClass="PageMenuViewController" customModule="StudyApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="g9c-vP-5JC"/>
+                        <viewControllerLayoutGuide type="bottom" id="eA7-nN-3Ar"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="60c-xF-ezm">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ss1-qW-DKc">
+                                <rect key="frame" x="26" y="28" width="30" height="30"/>
+                                <state key="normal" title="Top"/>
+                                <connections>
+                                    <segue destination="Kk0-fi-By1" kind="show" id="Adc-mG-dso"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fGa-UG-Vpx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="434" y="425"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="XjQ-PB-hpP">
             <objects>
@@ -70,6 +98,13 @@
                                     <segue destination="IhG-Lh-P0S" kind="show" id="f7e-cf-0I2">
                                         <nil key="action"/>
                                     </segue>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qoH-kH-c9U">
+                                <rect key="frame" x="126" y="301" width="69" height="30"/>
+                                <state key="normal" title="menu test"/>
+                                <connections>
+                                    <segue destination="DOg-j8-D54" kind="show" id="Ywo-9e-7rU"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -185,6 +220,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="89f-yL-B85"/>
+        <segue reference="Adc-mG-dso"/>
     </inferredMetricsTieBreakers>
 </document>
