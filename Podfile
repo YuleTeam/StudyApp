@@ -2,11 +2,8 @@
 # platform :ios, '9.0'
 platform :ios, ‘9.0’
 pod 'Charts'
-<<<<<<< HEAD
 pod 'PageMenu'
-=======
-pod 'NCMB', :git => 'https://github.com/NIFTYCloud-mbaas/ncmb_ios.git'
->>>>>>> b33b7cc36b7f2044a8f8e9140ec17b955b19479b
+pod 'NCMB' , :git => ‘https://github.com/NIFTYCloud-mbaas/ncmb_ios.git'
 use_frameworks!
 
 target 'StudyApp' do

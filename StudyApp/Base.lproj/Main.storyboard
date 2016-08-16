@@ -47,36 +47,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G7A-PW-I6B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="59" y="425"/>
             <point key="canvasLocation" x="21" y="350"/>
-        </scene>
-        <!--Page Menu View Controller-->
-        <scene sceneID="lDc-X0-UMD">
-            <objects>
-                <viewController id="DOg-j8-D54" customClass="PageMenuViewController" customModule="StudyApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="g9c-vP-5JC"/>
-                        <viewControllerLayoutGuide type="bottom" id="eA7-nN-3Ar"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="60c-xF-ezm">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ss1-qW-DKc">
-                                <rect key="frame" x="26" y="28" width="30" height="30"/>
-                                <state key="normal" title="Top"/>
-                                <connections>
-                                    <segue destination="Kk0-fi-By1" kind="show" id="Adc-mG-dso"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fGa-UG-Vpx" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="434" y="425"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="XjQ-PB-hpP">
@@ -108,11 +79,11 @@
                                     </segue>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qoH-kH-c9U">
-                                <rect key="frame" x="126" y="301" width="69" height="30"/>
-                                <state key="normal" title="menu test"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gte-Z7-d5J">
+                                <rect key="frame" x="122" y="368" width="77" height="30"/>
+                                <state key="normal" title="Page Menu"/>
                                 <connections>
-                                    <segue destination="DOg-j8-D54" kind="show" id="Ywo-9e-7rU"/>
+                                    <segue destination="mlv-Ie-nc6" kind="show" id="Ln5-MF-Jxk"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -226,12 +197,36 @@
             </objects>
             <point key="canvasLocation" x="59" y="1088"/>
         </scene>
+        <!--Page Menu View Controller-->
+        <scene sceneID="J3R-HM-lhF">
+            <objects>
+                <viewController id="mlv-Ie-nc6" customClass="PageMenuViewController" customModule="StudyApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DlJ-Qb-zZM"/>
+                        <viewControllerLayoutGuide type="bottom" id="8SM-nF-u5W"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8GP-kH-VXf">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="433-OM-yQ1">
+                                <rect key="frame" x="19" y="20" width="30" height="30"/>
+                                <state key="normal" title="Top"/>
+                                <connections>
+                                    <segue destination="Kk0-fi-By1" kind="show" id="dhY-6g-rUO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ef2-N4-8E3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="519" y="695"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-<<<<<<< HEAD
-        <segue reference="Adc-mG-dso"/>
-=======
-        <segue reference="7Jt-VN-4sF"/>
->>>>>>> b33b7cc36b7f2044a8f8e9140ec17b955b19479b
+        <segue reference="dhY-6g-rUO"/>
     </inferredMetricsTieBreakers>
 </document>
