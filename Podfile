@@ -5,6 +5,8 @@ pod 'Charts'
 pod 'PageMenu'
 pod 'NCMB' , :git => ‘https://github.com/NIFTYCloud-mbaas/ncmb_ios.git'
 pod 'RAMAnimatedTabBarController'
+pod 'Cheetah'
+pod 'BubbleTransition', '~> 1.0.0'
 use_frameworks!
 
 target 'StudyApp' do

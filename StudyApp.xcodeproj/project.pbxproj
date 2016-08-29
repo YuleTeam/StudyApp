@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0240637A1D69CE14007A1F34 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024063791D69CE14007A1F34 /* TabViewController.swift */; };
 		0240637C1D69D92E007A1F34 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0240637B1D69D92E007A1F34 /* Images.xcassets */; };
+		024B30721D744DCC0040972C /* TimerStartedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024B30711D744DCC0040972C /* TimerStartedViewController.swift */; };
+		024B30741D745BE90040972C /* CircularButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024B30731D745BE90040972C /* CircularButton.swift */; };
 		0251B97B1D45F77700A310F5 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 0251B97A1D45F77700A310F5 /* .gitignore */; };
 		027854671D6185E000A00DC6 /* StudyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027854661D6185E000A00DC6 /* StudyData.swift */; };
 		02F64C861D4362AE00B33C80 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F64C851D4362AE00B33C80 /* AppDelegate.swift */; };
@@ -25,6 +27,8 @@
 /* Begin PBXFileReference section */
 		024063791D69CE14007A1F34 /* TabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
 		0240637B1D69D92E007A1F34 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		024B30711D744DCC0040972C /* TimerStartedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerStartedViewController.swift; sourceTree = "<group>"; };
+		024B30731D745BE90040972C /* CircularButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularButton.swift; sourceTree = "<group>"; };
 		0251B97A1D45F77700A310F5 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = .gitignore; path = Pods/.gitignore; sourceTree = "<group>"; };
 		027854661D6185E000A00DC6 /* StudyData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudyData.swift; sourceTree = "<group>"; };
 		02F64C821D4362AE00B33C80 /* StudyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,6 +85,8 @@
 				B30B07671D449B6000A73A0E /* GraphViewController.swift */,
 				B30B07691D449BCC00A73A0E /* StartViewController.swift */,
 				02F64C891D4362AE00B33C80 /* Main.storyboard */,
+				024B30731D745BE90040972C /* CircularButton.swift */,
+				024B30711D744DCC0040972C /* TimerStartedViewController.swift */,
 				024063791D69CE14007A1F34 /* TabViewController.swift */,
 				B37876BC1D61B08E00B137FB /* PageMenuViewController.swift */,
 				02F64C8C1D4362AE00B33C80 /* Assets.xcassets */,
@@ -238,9 +244,11 @@
 				B37876BD1D61B08E00B137FB /* PageMenuViewController.swift in Sources */,
 				B30B076A1D449BCC00A73A0E /* StartViewController.swift in Sources */,
 				027854671D6185E000A00DC6 /* StudyData.swift in Sources */,
+				024B30721D744DCC0040972C /* TimerStartedViewController.swift in Sources */,
 				02F64C881D4362AE00B33C80 /* TimerViewController.swift in Sources */,
 				0240637A1D69CE14007A1F34 /* TabViewController.swift in Sources */,
 				02F64C861D4362AE00B33C80 /* AppDelegate.swift in Sources */,
+				024B30741D745BE90040972C /* CircularButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

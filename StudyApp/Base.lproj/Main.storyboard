@@ -1,130 +1,50 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Kk0-fi-By1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="kFC-h8-hmJ">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
-        <!--Graph View Controller-->
-        <scene sceneID="h5s-dM-1oH">
-            <objects>
-                <viewController id="IhG-Lh-P0S" customClass="GraphViewController" customModule="StudyApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="hT9-hc-Ibh"/>
-                        <viewControllerLayoutGuide type="bottom" id="7Um-Wh-65n"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Tqz-Pq-cFd">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E90-pJ-1V6" customClass="BarChartView" customModule="Charts">
-                                <rect key="frame" x="34" y="122" width="253" height="379"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hdk-gV-tr9">
-                                <rect key="frame" x="29" y="28" width="30" height="30"/>
-                                <state key="normal" title="Top"/>
-                                <connections>
-                                    <segue destination="Kk0-fi-By1" kind="show" id="7Jt-VN-4sF">
-                                        <nil key="action"/>
-                                    </segue>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lLf-qd-97Y">
-                                <rect key="frame" x="262" y="28" width="30" height="30"/>
-                                <state key="normal" title="Add"/>
-                                <connections>
-                                    <action selector="addDB:" destination="IhG-Lh-P0S" eventType="touchUpInside" id="QIe-dz-O5i"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                    <connections>
-                        <outlet property="barChartView" destination="E90-pJ-1V6" id="wdV-HT-hZ5"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="G7A-PW-I6B" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="21" y="350"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="XjQ-PB-hpP">
-            <objects>
-                <viewController id="Kk0-fi-By1" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Eq2-3H-uwT"/>
-                        <viewControllerLayoutGuide type="bottom" id="GAr-pU-O60"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="gkN-LT-JVE">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FwI-NM-7As">
-                                <rect key="frame" x="140" y="113" width="40" height="30"/>
-                                <state key="normal" title="Timer"/>
-                                <connections>
-                                    <segue destination="FmP-ZY-jmA" kind="show" id="dsY-Zo-IaU">
-                                        <nil key="action"/>
-                                    </segue>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oSZ-o1-eEA">
-                                <rect key="frame" x="139" y="203" width="43" height="30"/>
-                                <state key="normal" title="Graph"/>
-                                <connections>
-                                    <segue destination="IhG-Lh-P0S" kind="show" id="f7e-cf-0I2">
-                                        <nil key="action"/>
-                                    </segue>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gte-Z7-d5J">
-                                <rect key="frame" x="122" y="368" width="77" height="30"/>
-                                <state key="normal" title="Page Menu"/>
-                                <connections>
-                                    <segue destination="mlv-Ie-nc6" kind="show" id="Ln5-MF-Jxk"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1lf-kQ-QxS">
-                                <rect key="frame" x="126" y="427" width="68" height="30"/>
-                                <state key="normal" title="Tab Menu"/>
-                                <connections>
-                                    <segue destination="kFC-h8-hmJ" kind="show" id="bUY-Mi-CT8"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Bsy-B1-11C" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-484" y="425"/>
-        </scene>
-        <!--Item 2-->
+        <!--Graph-->
         <scene sceneID="eN9-mu-vMA">
             <objects>
-                <viewController id="str-Ew-4wY" sceneMemberID="viewController">
+                <viewController id="str-Ew-4wY" customClass="GraphViewController" customModule="StudyApp" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zML-kL-OLn"/>
                         <viewControllerLayoutGuide type="bottom" id="0U6-6x-mVW"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="olr-m9-Wph">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PRa-Gn-oBI">
+                                <rect key="frame" x="270" y="35" width="30" height="30"/>
+                                <state key="normal" title="Add"/>
+                                <connections>
+                                    <action selector="addDB:" destination="str-Ew-4wY" eventType="touchUpInside" id="cBi-iN-O8Q"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1cv-0d-L81" customClass="BarChartView" customModule="Charts">
+                                <rect key="frame" x="37" y="101" width="253" height="379"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" image="icon_user" id="Hsb-Oy-4xD" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
+                    <tabBarItem key="tabBarItem" title="Graph" image="icon_user" id="Hsb-Oy-4xD" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
                         <connections>
                             <outlet property="animation" destination="TQp-eL-vh1" id="Lm9-g1-Xgw"/>
                         </connections>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="barChartView" destination="1cv-0d-L81" id="2iy-gv-mdc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aQ9-5D-aoZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <customObject id="TQp-eL-vh1" customClass="RAMFlipTopTransitionItemAnimations" customModule="RAMAnimatedTabBarController"/>
             </objects>
-            <point key="canvasLocation" x="-333" y="2001"/>
+            <point key="canvasLocation" x="-777" y="1996"/>
         </scene>
         <!--Item-->
         <scene sceneID="RMd-R7-2Hu">
@@ -135,7 +55,7 @@
                         <viewControllerLayoutGuide type="bottom" id="ebc-Nm-sDs"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Pz5-Vu-cw2">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -150,40 +70,175 @@
             </objects>
             <point key="canvasLocation" x="29" y="1895"/>
         </scene>
-        <!--Item 1-->
+        <!--Timer-->
         <scene sceneID="Qpc-a5-wEL">
             <objects>
-                <viewController id="yxe-nC-wFr" sceneMemberID="viewController">
+                <viewController id="yxe-nC-wFr" customClass="TimerViewController" customModule="StudyApp" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="57b-VW-3qt"/>
                         <viewControllerLayoutGuide type="bottom" id="FeQ-f0-iCP"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ou4-af-ZoI">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uDN-m8-8Ed">
+                                <rect key="frame" x="154" y="374" width="32" height="30"/>
+                                <state key="normal" title="1min"/>
+                                <connections>
+                                    <action selector="min1:" destination="yxe-nC-wFr" eventType="touchUpInside" id="w27-SE-PMV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EJG-Jb-KOS">
+                                <rect key="frame" x="267" y="374" width="41" height="30"/>
+                                <state key="normal" title="10min"/>
+                                <connections>
+                                    <action selector="min10:" destination="yxe-nC-wFr" eventType="touchUpInside" id="0LR-Th-mzX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eEC-T1-Iv5">
+                                <rect key="frame" x="32" y="374" width="43" height="30"/>
+                                <state key="normal" title="30sec"/>
+                                <connections>
+                                    <action selector="sec30:" destination="yxe-nC-wFr" eventType="touchUpInside" id="DIm-1l-86E"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eRr-Af-YeV">
+                                <rect key="frame" x="79" y="472" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UtX-mi-0xE">
+                                <rect key="frame" x="228" y="466" width="30" height="30"/>
+                                <state key="normal" title="決定"/>
+                                <connections>
+                                    <action selector="definition:" destination="yxe-nC-wFr" eventType="touchUpInside" id="B8s-7U-8hE"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JvF-Bw-hIZ">
+                                <rect key="frame" x="70" y="412" width="201" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pqc-aX-Doe" customClass="CircularButton" customModule="StudyApp" customModuleProvider="target">
+                                <rect key="frame" x="255" y="256" width="89" height="89"/>
+                                <color key="backgroundColor" red="0.83529411764705885" green="0.36862745098039218" blue="0.51764705882352946" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="pqc-aX-Doe" secondAttribute="height" multiplier="1:1" id="BMk-oA-OZb"/>
+                                    <constraint firstAttribute="height" constant="90" id="E6C-ku-3MQ"/>
+                                    <constraint firstAttribute="width" secondItem="pqc-aX-Doe" secondAttribute="height" multiplier="1:1" id="i9B-gg-nsd"/>
+                                    <constraint firstAttribute="width" constant="90" id="msw-Ye-qoZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="41"/>
+                                <inset key="contentEdgeInsets" minX="20" minY="20" maxX="15" maxY="20"/>
+                                <state key="normal" title="▶︎">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="BMk-oA-OZb"/>
+                                        <exclude reference="E6C-ku-3MQ"/>
+                                        <exclude reference="msw-Ye-qoZ"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <segue destination="4oY-pS-nNS" kind="presentation" id="qhS-sK-fZO"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="pqc-aX-Doe" firstAttribute="centerY" secondItem="ou4-af-ZoI" secondAttribute="centerY" id="JJk-vD-wcF"/>
+                            <constraint firstItem="pqc-aX-Doe" firstAttribute="centerX" secondItem="ou4-af-ZoI" secondAttribute="centerX" id="Yrh-JV-S9C"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="CzC-gQ-vaj" appends="YES" id="5qi-a9-Fgy"/>
+                        </connections>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" image="Settings" id="rqC-cA-hHG" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
+                    <tabBarItem key="tabBarItem" title="Timer" image="Settings" id="rqC-cA-hHG" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
                         <connections>
                             <outlet property="animation" destination="d6I-Mi-7Zk" id="pnG-k7-aJT"/>
                         </connections>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="myTextField" destination="JvF-Bw-hIZ" id="EZ2-tX-79T"/>
+                        <outlet property="sec_pre" destination="eRr-Af-YeV" id="26X-09-SWk"/>
+                        <outlet property="timerStartButton" destination="pqc-aX-Doe" id="lZL-jk-SJZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WaK-eh-MSD" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <customObject id="d6I-Mi-7Zk" customClass="RAMLeftRotationAnimation" customModule="RAMAnimatedTabBarController"/>
+                <customObject id="d6I-Mi-7Zk" customClass="RAMBounceAnimation" customModule="RAMAnimatedTabBarController"/>
+                <tapGestureRecognizer id="CzC-gQ-vaj">
+                    <connections>
+                        <action selector="tapScreen:" destination="yxe-nC-wFr" id="lfV-4m-hYC"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-1245" y="2009"/>
+            <point key="canvasLocation" x="-1453" y="1996"/>
+        </scene>
+        <!--Timer Started View Controller-->
+        <scene sceneID="KWb-hX-cb7">
+            <objects>
+                <viewController id="4oY-pS-nNS" customClass="TimerStartedViewController" customModule="StudyApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cLE-P2-tyA"/>
+                        <viewControllerLayoutGuide type="bottom" id="Bgu-Fq-otZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HWz-NR-hAj">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0uI-pa-Kp6" customClass="CircularButton" customModule="StudyApp" customModuleProvider="target">
+                                <rect key="frame" x="255" y="256" width="89" height="89"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="0uI-pa-Kp6" secondAttribute="height" multiplier="1:1" id="KmR-mh-16x"/>
+                                    <constraint firstAttribute="width" constant="90" id="gJx-jb-MgU"/>
+                                    <constraint firstAttribute="width" secondItem="0uI-pa-Kp6" secondAttribute="height" multiplier="1:1" id="mlH-Fb-wkf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="41"/>
+                                <inset key="contentEdgeInsets" minX="20" minY="20" maxX="20" maxY="20"/>
+                                <state key="normal" title="II">
+                                    <color key="titleColor" red="0.83529411760000005" green="0.36862745099999999" blue="0.51764705879999995" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="KmR-mh-16x"/>
+                                        <exclude reference="gJx-jb-MgU"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="closeAction:" destination="4oY-pS-nNS" eventType="touchUpInside" id="fdQ-nY-0A1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.83529411760000005" green="0.36862745099999999" blue="0.51764705879999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="0uI-pa-Kp6" firstAttribute="centerY" secondItem="HWz-NR-hAj" secondAttribute="centerY" id="AH1-eJ-1cr"/>
+                            <constraint firstItem="0uI-pa-Kp6" firstAttribute="centerX" secondItem="HWz-NR-hAj" secondAttribute="centerX" id="eir-eJ-WQi"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="closeButton" destination="0uI-pa-Kp6" id="qBs-QQ-jOR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sQe-TT-6VI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1528" y="2806"/>
         </scene>
         <!--Item 3-->
         <scene sceneID="YKW-4l-nJ6">
             <objects>
-                <viewController id="v2q-dJ-43B" sceneMemberID="viewController">
+                <viewController id="v2q-dJ-43B" customClass="PageMenuViewController" customModule="StudyApp" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="HSz-x5-nlu"/>
                         <viewControllerLayoutGuide type="bottom" id="eTb-PL-akr"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="21f-kw-UPo">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -196,7 +251,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6c0-CJ-XmB" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <customObject id="kwf-m3-T46" customClass="RAMFumeAnimation" customModule="RAMAnimatedTabBarController"/>
             </objects>
-            <point key="canvasLocation" x="-761" y="2001"/>
+            <point key="canvasLocation" x="-190" y="2631"/>
         </scene>
         <!--Animated Tab Bar Controller-->
         <scene sceneID="R8K-TU-rxE">
@@ -218,136 +273,6 @@
             </objects>
             <point key="canvasLocation" x="-569" y="1173"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="jCx-Dt-pZ2">
-            <objects>
-                <viewController id="FmP-ZY-jmA" customClass="ViewController" customModule="StudyApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="uQl-Lf-fuM"/>
-                        <viewControllerLayoutGuide type="bottom" id="laV-X9-sg2"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="cSX-lY-Hke">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="340-BM-rmK">
-                                <rect key="frame" x="144" y="403" width="32" height="30"/>
-                                <state key="normal" title="1min"/>
-                                <connections>
-                                    <action selector="min1:" destination="FmP-ZY-jmA" eventType="touchUpInside" id="2XX-B5-yHD"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dyZ-b6-bbh">
-                                <rect key="frame" x="257" y="403" width="41" height="30"/>
-                                <state key="normal" title="10min"/>
-                                <connections>
-                                    <action selector="min10:" destination="FmP-ZY-jmA" eventType="touchUpInside" id="PTT-JD-HgJ"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XGA-oh-9sg">
-                                <rect key="frame" x="22" y="403" width="43" height="30"/>
-                                <state key="normal" title="30sec"/>
-                                <connections>
-                                    <action selector="sec30:" destination="FmP-ZY-jmA" eventType="touchUpInside" id="8mR-45-mCU"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yBU-qq-3Q7">
-                                <rect key="frame" x="22" y="403" width="43" height="30"/>
-                                <state key="normal" title="30sec"/>
-                                <connections>
-                                    <action selector="sec30:" destination="FmP-ZY-jmA" eventType="touchUpInside" id="GFO-Ga-OmA"/>
-                                    <action selector="sec:" destination="FmP-ZY-jmA" eventType="touchUpInside" id="D1M-36-YNj"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tDW-nd-WEq">
-                                <rect key="frame" x="123" y="441" width="75" height="30"/>
-                                <state key="normal" title="変更ボタン"/>
-                                <connections>
-                                    <action selector="tapHandler:" destination="FmP-ZY-jmA" eventType="touchUpInside" id="AwZ-kr-els"/>
-                                </connections>
-                            </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lPH-D0-wW4">
-                                <rect key="frame" x="74" y="518" width="97" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qHS-Ni-m3s">
-                                <rect key="frame" x="208" y="518" width="30" height="30"/>
-                                <state key="normal" title="決定"/>
-                                <connections>
-                                    <action selector="definition:" destination="FmP-ZY-jmA" eventType="touchUpInside" id="UoX-Gg-KMB"/>
-                                </connections>
-                            </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lo5-Hz-BCc">
-                                <rect key="frame" x="60" y="441" width="201" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bbD-gk-3iN">
-                                <rect key="frame" x="21" y="34" width="45" height="30"/>
-                                <state key="normal" title="トップ"/>
-                                <connections>
-                                    <segue destination="Kk0-fi-By1" kind="show" id="89f-yL-B85">
-                                        <nil key="action"/>
-                                    </segue>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <gestureRecognizers/>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="yBU-qq-3Q7"/>
-                                <exclude reference="tDW-nd-WEq"/>
-                            </mask>
-                        </variation>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="idZ-3N-5Eh" appends="YES" id="KKP-2I-mei"/>
-                        </connections>
-                    </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                    <connections>
-                        <outlet property="myTextField" destination="Lo5-Hz-BCc" id="WhM-zF-rbo"/>
-                        <outlet property="sec_pre" destination="lPH-D0-wW4" id="Rxa-pO-Vjk"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pR6-7x-R9d" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="idZ-3N-5Eh">
-                    <connections>
-                        <action selector="tapScreen:" destination="FmP-ZY-jmA" id="n4A-FW-Jhq"/>
-                    </connections>
-                </tapGestureRecognizer>
-            </objects>
-            <point key="canvasLocation" x="59" y="1088"/>
-        </scene>
-        <!--Page Menu View Controller-->
-        <scene sceneID="J3R-HM-lhF">
-            <objects>
-                <viewController id="mlv-Ie-nc6" customClass="PageMenuViewController" customModule="StudyApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="DlJ-Qb-zZM"/>
-                        <viewControllerLayoutGuide type="bottom" id="8SM-nF-u5W"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8GP-kH-VXf">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="433-OM-yQ1">
-                                <rect key="frame" x="19" y="20" width="30" height="30"/>
-                                <state key="normal" title="Top"/>
-                                <connections>
-                                    <segue destination="Kk0-fi-By1" kind="show" id="dhY-6g-rUO"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ef2-N4-8E3" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="519" y="695"/>
-        </scene>
     </scenes>
     <resources>
         <image name="Settings" width="30" height="30"/>
@@ -355,7 +280,4 @@
         <image name="icon_pin" width="30" height="30"/>
         <image name="icon_user" width="30" height="30"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="dhY-6g-rUO"/>
-    </inferredMetricsTieBreakers>
 </document>

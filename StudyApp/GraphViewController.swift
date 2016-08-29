@@ -20,7 +20,6 @@ class GraphViewController: UIViewController {
     // storyboardから接続
     @IBOutlet weak var barChartView: BarChartView!
 
-
     // DB挿入例
     @IBAction func addDB(sender: UIButton) {
         let userId = "test"
