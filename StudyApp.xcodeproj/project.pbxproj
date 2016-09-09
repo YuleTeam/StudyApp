@@ -12,6 +12,7 @@
 		024B30721D744DCC0040972C /* TimerStartedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024B30711D744DCC0040972C /* TimerStartedViewController.swift */; };
 		024B30741D745BE90040972C /* CircularButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024B30731D745BE90040972C /* CircularButton.swift */; };
 		0251B97B1D45F77700A310F5 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 0251B97A1D45F77700A310F5 /* .gitignore */; };
+		0269CB691D7FF7A6001698B9 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0269CB681D7FF7A6001698B9 /* CustomButton.swift */; };
 		027854671D6185E000A00DC6 /* StudyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027854661D6185E000A00DC6 /* StudyData.swift */; };
 		02F64C861D4362AE00B33C80 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F64C851D4362AE00B33C80 /* AppDelegate.swift */; };
 		02F64C881D4362AE00B33C80 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F64C871D4362AE00B33C80 /* TimerViewController.swift */; };
@@ -30,6 +31,7 @@
 		024B30711D744DCC0040972C /* TimerStartedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerStartedViewController.swift; sourceTree = "<group>"; };
 		024B30731D745BE90040972C /* CircularButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularButton.swift; sourceTree = "<group>"; };
 		0251B97A1D45F77700A310F5 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = .gitignore; path = Pods/.gitignore; sourceTree = "<group>"; };
+		0269CB681D7FF7A6001698B9 /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		027854661D6185E000A00DC6 /* StudyData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudyData.swift; sourceTree = "<group>"; };
 		02F64C821D4362AE00B33C80 /* StudyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02F64C851D4362AE00B33C80 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 				02F64C8E1D4362AE00B33C80 /* LaunchScreen.storyboard */,
 				02F64C911D4362AE00B33C80 /* Info.plist */,
 				027854661D6185E000A00DC6 /* StudyData.swift */,
+				0269CB681D7FF7A6001698B9 /* CustomButton.swift */,
 			);
 			path = StudyApp;
 			sourceTree = "<group>";
@@ -244,6 +247,7 @@
 				B37876BD1D61B08E00B137FB /* PageMenuViewController.swift in Sources */,
 				B30B076A1D449BCC00A73A0E /* StartViewController.swift in Sources */,
 				027854671D6185E000A00DC6 /* StudyData.swift in Sources */,
+				0269CB691D7FF7A6001698B9 /* CustomButton.swift in Sources */,
 				024B30721D744DCC0040972C /* TimerStartedViewController.swift in Sources */,
 				02F64C881D4362AE00B33C80 /* TimerViewController.swift in Sources */,
 				0240637A1D69CE14007A1F34 /* TabViewController.swift in Sources */,

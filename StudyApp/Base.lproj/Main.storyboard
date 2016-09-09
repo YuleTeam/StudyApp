@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="kFC-h8-hmJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="kFC-h8-hmJ">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Graph-->
+        <!--統計-->
         <scene sceneID="eN9-mu-vMA">
             <objects>
                 <viewController id="str-Ew-4wY" customClass="GraphViewController" customModule="StudyApp" sceneMemberID="viewController">
@@ -18,21 +19,49 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PRa-Gn-oBI">
-                                <rect key="frame" x="270" y="35" width="30" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PRa-Gn-oBI">
+                                <rect key="frame" x="285" y="120" width="30" height="30"/>
                                 <state key="normal" title="Add"/>
                                 <connections>
                                     <action selector="addDB:" destination="str-Ew-4wY" eventType="touchUpInside" id="cBi-iN-O8Q"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1cv-0d-L81" customClass="BarChartView" customModule="Charts">
-                                <rect key="frame" x="37" y="101" width="253" height="379"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1cv-0d-L81" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="177" y="170" width="247" height="200"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="OFl-XQ-5ZR"/>
+                                    <constraint firstAttribute="width" constant="247" id="dEd-TM-JOg"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1cv-0d-L81" firstAttribute="top" secondItem="PRa-Gn-oBI" secondAttribute="bottom" constant="20" id="EVD-5Y-QpR"/>
+                            <constraint firstItem="1cv-0d-L81" firstAttribute="centerX" secondItem="olr-m9-Wph" secondAttribute="centerX" id="Fz3-Q8-gZa"/>
+                            <constraint firstItem="1cv-0d-L81" firstAttribute="centerY" secondItem="olr-m9-Wph" secondAttribute="centerY" constant="-30" id="LTK-A1-qYM"/>
+                            <constraint firstItem="PRa-Gn-oBI" firstAttribute="leading" secondItem="olr-m9-Wph" secondAttribute="leading" constant="270" id="SSk-bi-jF7"/>
+                            <constraint firstItem="PRa-Gn-oBI" firstAttribute="centerX" secondItem="olr-m9-Wph" secondAttribute="centerX" id="YqA-7S-bBB"/>
+                            <constraint firstItem="0U6-6x-mVW" firstAttribute="top" secondItem="1cv-0d-L81" secondAttribute="bottom" constant="76" id="cdk-4o-Wze"/>
+                            <constraint firstItem="1cv-0d-L81" firstAttribute="leading" secondItem="olr-m9-Wph" secondAttribute="leading" constant="177" id="cwt-CE-9Wc"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="cwt-CE-9Wc"/>
+                                <exclude reference="SSk-bi-jF7"/>
+                                <exclude reference="cdk-4o-Wze"/>
+                            </mask>
+                        </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Graph" image="icon_user" id="Hsb-Oy-4xD" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
+                    <tabBarItem key="tabBarItem" title="統計" image="analyze" id="Hsb-Oy-4xD" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                         <connections>
                             <outlet property="animation" destination="TQp-eL-vh1" id="Lm9-g1-Xgw"/>
                         </connections>
@@ -42,11 +71,20 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aQ9-5D-aoZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <customObject id="TQp-eL-vh1" customClass="RAMFlipTopTransitionItemAnimations" customModule="RAMAnimatedTabBarController"/>
+                <customObject id="TQp-eL-vh1" customClass="RAMBounceAnimation" customModule="RAMAnimatedTabBarController">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="textSelectedColor">
+                            <color key="value" red="0.99607843137254903" green="0.87058823529411766" blue="0.42352941176470588" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="iconSelectedColor">
+                            <color key="value" red="0.99607843137254903" green="0.87058823529411766" blue="0.42352941176470588" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </customObject>
             </objects>
             <point key="canvasLocation" x="-777" y="1996"/>
         </scene>
-        <!--Item-->
+        <!--設定-->
         <scene sceneID="RMd-R7-2Hu">
             <objects>
                 <viewController id="HcD-DP-IHX" sceneMemberID="viewController">
@@ -59,18 +97,35 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" image="icon_pin" id="BFp-yi-PZC" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
+                    <tabBarItem key="tabBarItem" title="設定" image="settings" id="BFp-yi-PZC" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                         <connections>
                             <outlet property="animation" destination="qdo-oF-W0P" id="5RZ-yD-j9H"/>
                         </connections>
                     </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xAH-dY-mW9" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <customObject id="qdo-oF-W0P" customClass="RAMFumeAnimation" customModule="RAMAnimatedTabBarController"/>
+                <customObject id="qdo-oF-W0P" customClass="RAMBounceAnimation" customModule="RAMAnimatedTabBarController">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="textSelectedColor">
+                            <color key="value" red="0.99607843139999996" green="0.87058823529999996" blue="0.42352941179999998" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="iconSelectedColor">
+                            <color key="value" red="0.99607843139999996" green="0.87058823529999996" blue="0.42352941179999998" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </customObject>
             </objects>
             <point key="canvasLocation" x="29" y="1895"/>
         </scene>
-        <!--Timer-->
+        <!--タイマー-->
         <scene sceneID="Qpc-a5-wEL">
             <objects>
                 <viewController id="yxe-nC-wFr" customClass="TimerViewController" customModule="StudyApp" sceneMemberID="viewController">
@@ -82,41 +137,44 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uDN-m8-8Ed">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uDN-m8-8Ed">
                                 <rect key="frame" x="154" y="374" width="32" height="30"/>
                                 <state key="normal" title="1min"/>
                                 <connections>
                                     <action selector="min1:" destination="yxe-nC-wFr" eventType="touchUpInside" id="w27-SE-PMV"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EJG-Jb-KOS">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EJG-Jb-KOS">
                                 <rect key="frame" x="267" y="374" width="41" height="30"/>
                                 <state key="normal" title="10min"/>
                                 <connections>
                                     <action selector="min10:" destination="yxe-nC-wFr" eventType="touchUpInside" id="0LR-Th-mzX"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eEC-T1-Iv5">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eEC-T1-Iv5">
                                 <rect key="frame" x="32" y="374" width="43" height="30"/>
                                 <state key="normal" title="30sec"/>
                                 <connections>
                                     <action selector="sec30:" destination="yxe-nC-wFr" eventType="touchUpInside" id="DIm-1l-86E"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eRr-Af-YeV">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eRr-Af-YeV">
                                 <rect key="frame" x="79" y="472" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UtX-mi-0xE">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UtX-mi-0xE">
                                 <rect key="frame" x="228" y="466" width="30" height="30"/>
                                 <state key="normal" title="決定"/>
                                 <connections>
                                     <action selector="definition:" destination="yxe-nC-wFr" eventType="touchUpInside" id="B8s-7U-8hE"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JvF-Bw-hIZ">
-                                <rect key="frame" x="70" y="412" width="201" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JvF-Bw-hIZ">
+                                <rect key="frame" x="65" y="412" width="150" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="Y3f-GK-QPy"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -146,30 +204,98 @@
                                     <segue destination="4oY-pS-nNS" kind="presentation" id="qhS-sK-fZO"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="djg-mj-PBr" customClass="CustomButton" customModule="StudyApp" customModuleProvider="target">
+                                <rect key="frame" x="251" y="398" width="97" height="44"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="djg-mj-PBr" secondAttribute="height" multiplier="97:44" id="NRN-T7-k4Q"/>
+                                    <constraint firstAttribute="height" constant="44" id="ZE1-qr-H9B"/>
+                                </constraints>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.25882352939999997" green="0.66666666669999997" blue="0.78039215689999997" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.25882352939999997" green="0.66666666669999997" blue="0.78039215689999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onClickintervalChange:" destination="yxe-nC-wFr" eventType="touchUpInside" id="26h-wk-9IV"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="uDN-m8-8Ed" firstAttribute="centerX" secondItem="JvF-Bw-hIZ" secondAttribute="centerX" constant="30.5" id="0lk-9a-6p7"/>
+                            <constraint firstItem="UtX-mi-0xE" firstAttribute="leading" secondItem="ou4-af-ZoI" secondAttribute="leading" constant="228" id="0ll-DY-ml9"/>
+                            <constraint firstItem="uDN-m8-8Ed" firstAttribute="baseline" secondItem="EJG-Jb-KOS" secondAttribute="baseline" id="3fw-DD-NID"/>
+                            <constraint firstItem="UtX-mi-0xE" firstAttribute="leading" secondItem="eRr-Af-YeV" secondAttribute="trailing" constant="52" id="6eF-H1-S4n"/>
+                            <constraint firstItem="djg-mj-PBr" firstAttribute="top" secondItem="pqc-aX-Doe" secondAttribute="bottom" constant="53" id="Asd-vN-6SS"/>
+                            <constraint firstItem="djg-mj-PBr" firstAttribute="centerX" secondItem="ou4-af-ZoI" secondAttribute="centerX" id="CRu-IS-uml"/>
+                            <constraint firstItem="eRr-Af-YeV" firstAttribute="leading" secondItem="ou4-af-ZoI" secondAttribute="leadingMargin" constant="59" id="Eic-d2-eKr"/>
+                            <constraint firstItem="UtX-mi-0xE" firstAttribute="top" secondItem="djg-mj-PBr" secondAttribute="bottom" constant="24" id="Hjh-up-WuL"/>
                             <constraint firstItem="pqc-aX-Doe" firstAttribute="centerY" secondItem="ou4-af-ZoI" secondAttribute="centerY" id="JJk-vD-wcF"/>
+                            <constraint firstItem="uDN-m8-8Ed" firstAttribute="top" secondItem="57b-VW-3qt" secondAttribute="bottom" constant="354" id="JwH-xL-JEl"/>
+                            <constraint firstItem="djg-mj-PBr" firstAttribute="leading" secondItem="uDN-m8-8Ed" secondAttribute="trailing" constant="65" id="Ko1-3T-g8k"/>
+                            <constraint firstItem="EJG-Jb-KOS" firstAttribute="leading" secondItem="uDN-m8-8Ed" secondAttribute="trailing" constant="81" id="OYx-4X-5lv"/>
+                            <constraint firstItem="uDN-m8-8Ed" firstAttribute="baseline" secondItem="eEC-T1-Iv5" secondAttribute="baseline" id="STz-E8-e7P"/>
+                            <constraint firstItem="UtX-mi-0xE" firstAttribute="top" secondItem="djg-mj-PBr" secondAttribute="bottom" constant="24" id="V5T-af-3V1"/>
+                            <constraint firstItem="djg-mj-PBr" firstAttribute="leading" secondItem="uDN-m8-8Ed" secondAttribute="trailing" constant="65" id="VMF-Bp-3NC"/>
+                            <constraint firstItem="eRr-Af-YeV" firstAttribute="top" secondItem="JvF-Bw-hIZ" secondAttribute="bottom" constant="30" id="YU4-Xj-Wj7"/>
                             <constraint firstItem="pqc-aX-Doe" firstAttribute="centerX" secondItem="ou4-af-ZoI" secondAttribute="centerX" id="Yrh-JV-S9C"/>
+                            <constraint firstItem="djg-mj-PBr" firstAttribute="bottom" secondItem="JvF-Bw-hIZ" secondAttribute="bottom" id="djF-D7-dWv"/>
+                            <constraint firstItem="JvF-Bw-hIZ" firstAttribute="top" secondItem="uDN-m8-8Ed" secondAttribute="bottom" constant="8" symbolic="YES" id="oHw-bk-6UI"/>
+                            <constraint firstItem="uDN-m8-8Ed" firstAttribute="leading" secondItem="eEC-T1-Iv5" secondAttribute="trailing" constant="79" id="uxb-dK-wMo"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="VMF-Bp-3NC"/>
+                                <exclude reference="djF-D7-dWv"/>
+                                <exclude reference="Hjh-up-WuL"/>
+                            </mask>
+                        </variation>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="CzC-gQ-vaj" appends="YES" id="5qi-a9-Fgy"/>
                         </connections>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Timer" image="Settings" id="rqC-cA-hHG" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
+                    <tabBarItem key="tabBarItem" title="タイマー" image="clock" selectedImage="clock" id="rqC-cA-hHG" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                         <connections>
                             <outlet property="animation" destination="d6I-Mi-7Zk" id="pnG-k7-aJT"/>
                         </connections>
                     </tabBarItem>
                     <connections>
+                        <outlet property="intervalChangeButton" destination="djg-mj-PBr" id="xjl-D3-7SF"/>
                         <outlet property="myTextField" destination="JvF-Bw-hIZ" id="EZ2-tX-79T"/>
                         <outlet property="sec_pre" destination="eRr-Af-YeV" id="26X-09-SWk"/>
                         <outlet property="timerStartButton" destination="pqc-aX-Doe" id="lZL-jk-SJZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WaK-eh-MSD" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <customObject id="d6I-Mi-7Zk" customClass="RAMBounceAnimation" customModule="RAMAnimatedTabBarController"/>
+                <customObject id="d6I-Mi-7Zk" customClass="RAMBounceAnimation" customModule="RAMAnimatedTabBarController">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="textSelectedColor">
+                            <color key="value" red="0.99746692180633545" green="0.87445491552352905" blue="0.42707869410514832" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="iconSelectedColor">
+                            <color key="value" red="0.99607843137254903" green="0.87058823529411766" blue="0.42352941176470588" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </customObject>
                 <tapGestureRecognizer id="CzC-gQ-vaj">
                     <connections>
                         <action selector="tapScreen:" destination="yxe-nC-wFr" id="lfV-4m-hYC"/>
@@ -214,10 +340,28 @@
                                     <action selector="closeAction:" destination="4oY-pS-nNS" eventType="touchUpInside" id="fdQ-nY-0A1"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xRE-jx-ayH">
+                                <rect key="frame" x="201" y="104" width="198" height="57"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="59" id="J4v-dg-O1v"/>
+                                    <constraint firstAttribute="width" constant="144" id="qb5-Uq-e8k"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="47"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="J4v-dg-O1v"/>
+                                        <exclude reference="qb5-Uq-e8k"/>
+                                    </mask>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.83529411760000005" green="0.36862745099999999" blue="0.51764705879999995" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="0uI-pa-Kp6" firstAttribute="centerY" secondItem="HWz-NR-hAj" secondAttribute="centerY" id="AH1-eJ-1cr"/>
+                            <constraint firstItem="xRE-jx-ayH" firstAttribute="centerX" secondItem="HWz-NR-hAj" secondAttribute="centerX" id="T8r-V7-NcM"/>
+                            <constraint firstItem="xRE-jx-ayH" firstAttribute="top" secondItem="cLE-P2-tyA" secondAttribute="bottom" constant="84" id="WoQ-jj-gg4"/>
                             <constraint firstItem="0uI-pa-Kp6" firstAttribute="centerX" secondItem="HWz-NR-hAj" secondAttribute="centerX" id="eir-eJ-WQi"/>
                         </constraints>
                     </view>
@@ -229,7 +373,7 @@
             </objects>
             <point key="canvasLocation" x="-1528" y="2806"/>
         </scene>
-        <!--Item 3-->
+        <!--SNS-->
         <scene sceneID="YKW-4l-nJ6">
             <objects>
                 <viewController id="v2q-dJ-43B" customClass="PageMenuViewController" customModule="StudyApp" sceneMemberID="viewController">
@@ -242,14 +386,34 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 3" image="drop" id="5fS-KN-O8o" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
+                    <tabBarItem key="tabBarItem" title="SNS" image="community" id="5fS-KN-O8o" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                         <connections>
                             <outlet property="animation" destination="kwf-m3-T46" id="G2T-6P-pQn"/>
                         </connections>
                     </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6c0-CJ-XmB" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <customObject id="kwf-m3-T46" customClass="RAMFumeAnimation" customModule="RAMAnimatedTabBarController"/>
+                <customObject id="kwf-m3-T46" customClass="RAMBounceAnimation" customModule="RAMAnimatedTabBarController">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="textSelectedColor">
+                            <color key="value" red="0.99746692179999996" green="0.87445491549999999" blue="0.42707869409999999" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="iconSelectedColor">
+                            <color key="value" red="0.99746692179999996" green="0.87445491549999999" blue="0.42707869409999999" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </customObject>
             </objects>
             <point key="canvasLocation" x="-190" y="2631"/>
         </scene>
@@ -260,7 +424,15 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" id="ena-Z6-TDB">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.83137254901960789" green="0.36862745098039218" blue="0.51372549019607838" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="SelectedImageTintColor">
+                                <color key="value" red="0.83137254901960789" green="0.36862745098039218" blue="0.51372549019607838" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
                         <segue destination="yxe-nC-wFr" kind="relationship" relationship="viewControllers" id="Mzj-Lr-Fq9"/>
@@ -275,9 +447,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Settings" width="30" height="30"/>
-        <image name="drop" width="24" height="24"/>
-        <image name="icon_pin" width="30" height="30"/>
-        <image name="icon_user" width="30" height="30"/>
+        <image name="analyze" width="25" height="25"/>
+        <image name="clock" width="25" height="25"/>
+        <image name="community" width="25" height="25"/>
+        <image name="settings" width="25" height="25"/>
     </resources>
 </document>

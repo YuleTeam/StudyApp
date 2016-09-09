@@ -29,8 +29,11 @@ class TimerViewController: UIViewController, UIViewControllerTransitioningDelega
 
     @IBOutlet weak var myTextField: UITextField!
 
+    @IBOutlet weak var intervalChangeButton: CustomButton!
+
     override func viewDidLoad() {
         //ラベルを作る
+        intervalChangeButton.setTitle("aa", forState: .Normal)
         myLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 50))
         myLabel.backgroundColor = UIColor.blueColor()
         myLabel.layer.masksToBounds = true
@@ -53,6 +56,7 @@ class TimerViewController: UIViewController, UIViewControllerTransitioningDelega
         // Do any additional setup after loading the view, typically from a nib.
     }
 
+    // タイマー開始ボタン
     let transition = BubbleTransition()
 
     @IBOutlet weak var timerStartButton: CircularButton!
@@ -82,6 +86,45 @@ class TimerViewController: UIViewController, UIViewControllerTransitioningDelega
         return transition
     }
 
+
+    var isIntervalClicked: Bool = false
+    var isProceedingAnimation: Bool = false
+    @IBAction func onClickintervalChange(sender: UIButton) {
+        if(isProceedingAnimation) {
+
+        } else if(!isIntervalClicked) {
+            isProceedingAnimation = true
+            isIntervalClicked = true
+            sender.cheetah
+                .rotate(M_PI)
+                .duration(0.2)
+                .easeInOutQuad
+                .size(sender.frame.size.width * 2, sender.frame.size.height * 2)
+                .duration(0.2)
+               // .delay(0.05)
+                .easeInOutQuad
+                .run()
+                .completion({
+                    self.isProceedingAnimation = false
+                })
+        } else {
+            isProceedingAnimation = true
+            isIntervalClicked = false
+            sender.cheetah
+                .size(sender.frame.size.width / 2, sender.frame.size.height / 2)
+                .duration(0.2)
+                .easeInOutQuad
+                .rotate(-1*M_PI)
+                .duration(0.2)
+                //.delay(0.05)
+                .easeInOutQuad
+                .run()
+                .completion({
+                    self.isProceedingAnimation = false
+                })
+        }
+
+    }
     //NSTimerIntervalで指定された秒数毎に呼び出されるメソッド.
     func onUpdate(timer: NSTimer) {
 

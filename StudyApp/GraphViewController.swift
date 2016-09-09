@@ -18,7 +18,7 @@ import NCMB
 class GraphViewController: UIViewController {
 
     // storyboardから接続
-    @IBOutlet weak var barChartView: BarChartView!
+    @IBOutlet weak var barChartView: LineChartView!
 
     // DB挿入例
     @IBAction func addDB(sender: UIButton) {
@@ -38,8 +38,21 @@ class GraphViewController: UIViewController {
         let unitsSold = [50.3, 68.3, 113.3, 115.7, 160.8, 214.0, 220.4, 132.1, 176.2, 120.9, 71.3, 48.0]
 
         barChartView.animate(yAxisDuration: 2.0)
+        barChartView.backgroundColor = UIColor.whiteColor()
+        barChartView.gridBackgroundColor = UIColor.whiteColor()
+
+        barChartView.drawGridBackgroundEnabled = true
+        barChartView.legend.enabled = false
+//        barChartView.xAxis.enabled = false
+        barChartView.xAxis.drawGridLinesEnabled = false
+        barChartView.xAxis.drawAxisLineEnabled = false
+
+        barChartView.leftAxis.drawAxisLineEnabled = false
+        barChartView.leftAxis.drawZeroLineEnabled = false
+        barChartView.leftAxis.drawGridLinesEnabled = true
+        barChartView.rightAxis.enabled = false
         barChartView.pinchZoomEnabled = false
-        barChartView.drawBarShadowEnabled = false
+        barChartView.dragEnabled = true
         barChartView.drawBordersEnabled = true
         barChartView.descriptionText = "京都府の月毎の降水量グラフ"
 
@@ -55,15 +68,25 @@ class GraphViewController: UIViewController {
     func setChart(dataPoints: [String], values: [Double]) {
         barChartView.noDataText = "You need to provide data for the chart."
 
-        var dataEntries: [BarChartDataEntry] = []
+        var dataEntries: [ChartDataEntry] = []
 
         for i in 0..<dataPoints.count {
-            let dataEntry = BarChartDataEntry(value: values[i], xIndex: i)
+            let dataEntry = ChartDataEntry(value: values[i], xIndex: i)
             dataEntries.append(dataEntry)
         }
 
-        let chartDataSet = BarChartDataSet(yVals: dataEntries, label: "降水量")
-        let chartData = BarChartData(xVals: months, dataSet: chartDataSet)
+        let chartDataSet = LineChartDataSet(yVals: dataEntries, label: "降水量")
+        chartDataSet.axisDependency = .Left
+        chartDataSet.drawCirclesEnabled = false
+        chartDataSet.lineWidth = 2.0
+        chartDataSet.circleRadius = 3.0
+        chartDataSet.drawCubicEnabled = true
+        chartDataSet.fillAlpha = 1.0
+        chartDataSet.drawFilledEnabled = true
+        chartDataSet.fillColor = UIColor.init(red: 51/255.0, green: 181/255.0, blue: 229/255.0, alpha: 150/255.0)
+        chartDataSet.highlightColor = UIColor.init(red: 244/255.0, green: 117/255.0, blue: 117/255.0, alpha: 1.0)
+        chartDataSet.drawCircleHoleEnabled = false
+        let chartData = LineChartData(xVals: months, dataSet: chartDataSet)
         barChartView.data = chartData
     }
 
